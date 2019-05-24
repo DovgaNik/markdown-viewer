@@ -3,18 +3,17 @@
 using namespace std;
 
 string command;
-
-//string arg1;
-//string arg2;
+int l;
 
 int main(int argc, char *argv[]){
-	command = "markdown -html " + string(argv[1]) + " >> " + string(argv[2]);
-//	system("markdown -html " + string(argv[1]) + " >> " + string(argv[2]));
-	cout << command << endl; //For debug
-	char command_char[command.length];
-	for(int i = 0; i < command.length; i++){
+	command = "markdown -html5 " + string(argv[1]) + " >> " + string(argv[2]);
+	l = command.length();
+	char command_char[l];
+	for(int i = 0; i < l; i++){
 		command_char[i] = command[i];
-	} 
-//	arg1 = string(argv[1]);
-//	arg2 = string(argv[2]);
+	}
+//	for(int i = 0; i < l; i++){
+//		cout << command_char[i];	
+//	}
+	system(command_char);
 }
