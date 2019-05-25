@@ -7,6 +7,17 @@ string command,
        html_filename;
 int l;
 
+void msleep(unsigned long milisec)
+{
+    struct timespec req={0};
+    time_t sec=(int)(milisec/1000);
+    milisec=milisec-(sec*1000);
+    req.tv_sec=sec;
+    req.tv_nsec=milisec*1000000L;
+    while(nanosleep(&req,&req)==-1)
+        continue;
+}
+
 int main(int argc, char *argv[]){
 	md_filename = string(argv[1]);
 	html_filename = string(argv[2]);
@@ -23,5 +34,8 @@ int main(int argc, char *argv[]){
 //	for(int i = 0; i < l; i++){
 //		cout << command_char[i];	
 //	}
-	system(command_char);
+	while(true){
+		system(command_char);
+		msleep(10000);
+	}
 }
