@@ -1,6 +1,30 @@
 Markdown viewer
 ===
 
+Usage:
+---
+
+	mdview [source file] [exit file] [time between updates]
+
+Installation:
+---
+
+	git clone https://github.com/DovgaNik/markdown-viewer
+	cd markdown-viewer
+	sudo make install
+
+Uninstallation:
+---
+
+	git clone https://github.com/DovgaNik/markdown-viewer
+	cd markdown-viewer
+	sudo make uninstall
+
+Or you can type:
+	
+	sudo rm /bin/mdview
+
+
 Dependencies:
 ---
 
