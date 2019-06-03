@@ -22,7 +22,7 @@ Uninstallation:
 
 Or you can type:
 	
-	sudo rm /bin/mdview
+	sudo rm /usr/local/bin/mdview
 
 
 Dependencies:

@@ -3,9 +3,9 @@ CFlags= -pipe -Wall -Wextra -Wpedantic
 EXE=mdview
 SRC=src/main.cpp
 OBJ=build/main.o
-DESTDIR=/bin
+DESTDIR=/usr/local/bin
 
-all: bin/$(EXE)
+all: $(DESTDIR)/$(EXE)
 
 bin/$(EXE): $(OBJ)
 	mkdir -p bin
