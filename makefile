@@ -5,7 +5,7 @@ SRC=src/main.cpp
 OBJ=build/main.o
 DESTDIR=/usr/local/bin
 
-all: $(DESTDIR)/$(EXE)
+all: bin/$(EXE)
 
 bin/$(EXE): $(OBJ)
 	mkdir -p bin
