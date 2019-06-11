@@ -1,8 +1,8 @@
 CppC=g++
 CFlags= -pipe -Wall -Wextra -Wpedantic
 EXE=mdview
-SRC=src/main.cpp lib/msleep/msleep.cpp
-OBJ=build/main.o build/msleep.o
+SRC=src/main.cpp lib/msleep/msleep.cpp lib/parser/parser.cpp
+OBJ=build/main.o build/msleep.o build/parser.o
 DESTDIR=/usr/local/bin
 
 all: bin/$(EXE)

@@ -1,5 +1,7 @@
 #include"../lib/msleep/msleep.hpp"
+#include"../lib/parser/parser.hpp"
 #include<iostream>
+#include<string>
 #include<fstream>
 
 using namespace std;
@@ -10,12 +12,6 @@ string command,
        token;
 int l,
     update_time;
-
-string parser(string input){
-	string delimiter = ".md";
-	string token = input.substr(0, input.find(delimiter));
-	return token;	
-}
 
 int main(int argc, char *argv[]){
 	switch(argc){
